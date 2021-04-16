@@ -31,13 +31,26 @@ console.log(`The current supplyChanges array is:`, supplyChanges);
 //    - if it is a positive number (greater than 0), log 'Added x parts.'
 //    - if the value is 0, skip it. Do not log it to the console.
 //    - if the value is negative, format the log as 'Part count -x.'
-console.log('6. Showing supplyChanges...');
-for ()
+console.log('6. Showing supplyChanges with "for" loop');
+for (let supplyIndex = 0; supplyIndex < supplyChanges.length; supplyIndex ++) {
+  if (supplyChanges[supplyIndex] > 0) {
+    console.log("Added " + supplyChanges[supplyIndex] + " parts.");
+  } else if (supplyChanges[supplyIndex] < 0) {
+    console.log("Part count " + supplyChanges[supplyIndex] + ".");
+  }
+}
 
 // STRETCH GOALS
 console.log('---  Stretch Goals  ---');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop.
 console.log('7. Showing supplyChanges with "for of" loop');
+for (let supplyIndex of supplyChanges) {
+  if (supplyIndex > 0) {
+    console.log("Added " + supplyIndex + " parts.");
+  } else if (supplyIndex < 0) {
+    console.log("Part count " + supplyIndex + ".");
+  }
+}
 
 // 8. Rewrite the `for` loop from #6 as a `while` loop.
 console.log('8. Showing supplyChanges with "while" loop');
@@ -46,3 +59,13 @@ console.log('8. Showing supplyChanges with "while" loop');
 // 9. Write a loop to determine the total number of parts available by
 //    adding up all the numbers in the 'supplyChanges' array.
 console.log('9. Total supplies available is:');
+
+
+
+// From my other assignment.
+  // console.log('#3a.: Some stars using While loops:');
+  // let starIndex = 0;
+  // while (starName = stars[starIndex]) {
+  //   console.log(starName);
+  //   starIndex ++;
+  // }
