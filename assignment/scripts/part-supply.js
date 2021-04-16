@@ -54,18 +54,22 @@ for (let supplyIndex of supplyChanges) {
 
 // 8. Rewrite the `for` loop from #6 as a `while` loop.
 console.log('8. Showing supplyChanges with "while" loop');
+let supplyIndex = 0;
+while (supplyIndex < supplyChanges.length) {
+  if (supplyChanges[supplyIndex] > 0) {
+    console.log("Added " + supplyChanges[supplyIndex] + " parts.");
+  } else if (supplyChanges[supplyIndex] < 0) {
+    console.log("Part count " + supplyChanges[supplyIndex] + ".");
+  }
+  supplyIndex ++;
+}
 
-
-// 9. Write a loop to determine the total number of parts available by
-//    adding up all the numbers in the 'supplyChanges' array.
+// 9. Write a loop to determine the total number of parts available by adding up all the numbers in the 'supplyChanges' array.
 console.log('9. Total supplies available is:');
+let supplyTotal = 0;
+for (let i = 0; i < supplyChanges.length; i ++) {
+  supplyTotal += supplyChanges[i];
+}
+console.log(supplyTotal);
 
-
-
-// From my other assignment.
-  // console.log('#3a.: Some stars using While loops:');
-  // let starIndex = 0;
-  // while (starName = stars[starIndex]) {
-  //   console.log(starName);
-  //   starIndex ++;
-  // }
+console.log("Ryan's Comment: These were hard!  I think I had the most issue with #7 and #8 -- which is funny, because looking back on #6, that's basically the answer for #8.  Anyways, thanks for the practice and reviewing my work! :)");
